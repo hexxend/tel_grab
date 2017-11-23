@@ -4,8 +4,8 @@
 #
 # hexxend 2017
 
-if [ $1 == '-h' ] || [ $1 == '--help' ] || [ -z $1 ]; then
-        echo -e 'Send HTTP HEAD request via telnet\nusage: ./tel_grab.sh host port set_host resource HTTP version\n eg. ./telgrab.sh www.hackthissite.org 80 hackthissite.org / 1.0\n'
+if [ -z $1 ]; then
+        echo -e 'Send HTTP HEAD request via telnet. MUST BE PIPED INTO TELNET.\nusage: ./tel_grab.sh host port set_host resource HTTP version\n eg. ./telgrab.sh www.hackthissite.org 80 hackthissite.org / 1.0 | telnet\n'
 else
     echo "open $1 $2"
     sleep 2
@@ -17,4 +17,4 @@ else
    sleep 2
 fi
 
-exit 
+exit 0
