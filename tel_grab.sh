@@ -2,9 +2,8 @@
 #Telnet Scripting
 # Run tel_grab.sh [host] [port] [set_host][resource] 
 #
-# hexxend 2017
+# 2017
 #
-# Released under FreeBSD license
 
 if [ -z $1 ]; then
         echo -e 'Send HTTP HEAD request via telnet. MUST BE PIPED INTO TELNET.\nusage: ./tel_grab.sh host port set_host resource HTTP version\n eg. ./telgrab.sh www.hackthissite.org 80 hackthissite.org / 1.0 | telnet\n'
